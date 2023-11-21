@@ -5,7 +5,7 @@
 package com.mycompany.proyecto_estructura_datos;
 
 public class Orden {
-       private static int nextOrderId = 1; // Variable estática para el siguiente ID disponible
+       private static int nextOrderId = 1; // Variable  para el siguiente ID disponible
     
         int id;
         String nombreCliente;
