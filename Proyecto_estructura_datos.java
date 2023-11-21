@@ -75,7 +75,7 @@ public class Proyecto_estructura_datos {
                 colaClientes.poll();
             } else {
                 System.out.println("Lo sentimos, no hay platillos disponibles en este momento para " + clienteActual);
-                // Puedes agregar más lógica aquí según tus requisitos
+
 
                 // Mover al siguiente cliente
                 colaClientes.add(colaClientes.poll());
