@@ -9,9 +9,20 @@ package com.mycompany.proyecto_estructura_datos;
  * @author ngranado
  */
 public class ListaCircular {
+    private NodoPlatillo primero;
     NodoPlatillo cabeza;
     NodoPlatillo ultimo;
     
+    public Platillo obtenerPrimeroPlatillo() {
+    if (cabeza != null) {
+        Platillo platillo = cabeza.getDato();
+        eliminarPrimeroPlatillo(); // Elimina el platillo asignado
+        return platillo;
+    } else {
+        System.out.println("La lista de platillos está vacía.");
+        return null; // O manejar el caso según tus requisitos.
+    }
+}
     public void inserta(Platillo platillo) {
         NodoPlatillo nuevoNodo = new NodoPlatillo(platillo);
 
@@ -48,6 +59,41 @@ public class ListaCircular {
                     
                     nuevoNodo.siguiente = auxiliar.siguiente;
                     auxiliar.siguiente = nuevoNodo;
+                }
+            }
+        }
+    }
+      public void eliminarPrimeroPlatillo() {
+    if (cabeza != null) {
+        cabeza = cabeza.siguiente;
+        ultimo.siguiente = cabeza;
+
+        // Actualiza el último platillo después de eliminar el primero
+        if (cabeza == null) {
+            ultimo = null;
+        }
+    }
+}
+
+    public void eliminarPlatillo(Platillo platillo) {
+        if (primero != null) {
+            NodoPlatillo actual = primero;
+            NodoPlatillo anterior = ultimo;
+
+            // Buscar el nodo que contiene el platillo
+            while (actual != null && actual.dato != platillo) {
+                anterior = actual;
+                actual = actual.siguiente;
+            }
+
+            // Verificar si se encontró el platillo
+            if (actual != null) {
+                anterior.siguiente = actual.siguiente;
+                if (actual == primero) {
+                    primero = actual.siguiente;
+                }
+                if (actual == ultimo) {
+                    ultimo = anterior;
                 }
             }
         }

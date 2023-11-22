@@ -1,7 +1,11 @@
 com\mycompany\proyecto_estructura_datos\NodoEmpleado.class
 com\mycompany\proyecto_estructura_datos\Proyecto_estructura_datos.class
 com\mycompany\proyecto_estructura_datos\PilaEmpleados.class
+com\mycompany\proyecto_estructura_datos\NodoEmpleadoArbol.class
+com\mycompany\proyecto_estructura_datos\ArbolEmpleado.class
+com\mycompany\proyecto_estructura_datos\ArbolPlatillos.class
 com\mycompany\proyecto_estructura_datos\Empleado.class
 com\mycompany\proyecto_estructura_datos\ListaCircular.class
 com\mycompany\proyecto_estructura_datos\Platillo.class
+com\mycompany\proyecto_estructura_datos\NodoArbolPlatillo.class
 com\mycompany\proyecto_estructura_datos\NodoPlatillo.class

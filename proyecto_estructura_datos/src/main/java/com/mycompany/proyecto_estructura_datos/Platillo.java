@@ -14,15 +14,25 @@ public class Platillo {
     int gastoIngredientes;
     int precio;
     Platillo siguiente;
+    String categoria;
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 
     public Platillo() {
     }
 
-    public Platillo(int id, String nombre, int gastoIngredientes, int precio) {
+    public Platillo(int id, String nombre, int gastoIngredientes, int precio, String categoria) {
         this.id = id;
         this.nombre = nombre;
         this.gastoIngredientes = gastoIngredientes;
         this.precio = precio;
+        this.categoria = categoria;
     }
     
     public int getId() {
@@ -67,7 +77,7 @@ public class Platillo {
 
     @Override
     public String toString() {
-        return this.id + " - " + this.nombre + " - Gasto: " + this.gastoIngredientes + " - Precio: " + this.precio;
-    }  
-    
+        return "Platillo{" + "id=" + id + ", nombre=" + nombre + ", gastoIngredientes=" + gastoIngredientes + ", precio=" + precio + ", siguiente=" + siguiente + ", categoria=" + categoria + '}';
+    }
+
 }
